@@ -135,7 +135,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         menu.addItem(login)
 
         menu.addItem(.separator())
-        menu.addItem(ActionItem("How to Use…") { Onboarding.show() })
+        menu.addItem(ActionItem("Welcome & Settings…") { Onboarding.show(bar: self) })
         menu.addItem(ActionItem("Quit Tuckbar", key: "q") { NSApp.terminate(nil) })
 
         // Attach the menu just for this click so a plain left-click keeps toggling.
